@@ -1,6 +1,13 @@
 namespace: sepsis-demo
 namespace_postgres: openshift
 
+secretStore:
+  name: vault-backend
+  kind: ClusterSecretStore
+
+fhirpsqldbsecret:
+  key: secret/data/global/fhir-psql-db
+
 #Added the cluster Domain for make test to pass
 global:
   hubClusterDomain: hub.example.com
