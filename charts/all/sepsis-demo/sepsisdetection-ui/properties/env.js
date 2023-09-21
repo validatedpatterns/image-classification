@@ -1,4 +1,5 @@
 // blank values are replaced at runtime by the set-config.js node script
+// WH: might move USERID into secrets too, later.
 (function(window) {
   window._env = window._env || {};
 
