@@ -98,7 +98,6 @@ items:
             - name: env
               mountPath: /opt/app-root/src/assets/js/env.js
               subPath: env.js
-                    image: keycloak:latest
         dnsPolicy: ClusterFirst
         restartPolicy: Always
         schedulerName: default-scheduler
