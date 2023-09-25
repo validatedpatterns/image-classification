@@ -32,7 +32,7 @@ sso_url: "https://sso-sepsis-demo"
 patient_viewer_url: "https://demo.healthflow.io/profile/5e3ad7fe-24fa-4dc2-8be5-25554a8efb2c"
 
 sepsisdetection_rhpam_app_name: sepsisdetection-rhpam
-sepsisdetection_rhpam_api_passwd: kieserver
+sepsisdetection_rhpam_api_passwd: kieserver_pw # loaded from secret file
 sepsisdetection_rhpam_deployment_name: sepsisdetection-kjar
 sepsisdetection_rhpam_deployment_version: 1.0.0
 sepsisdetection_rhpam_process_id: sepsisdetection
