@@ -131,6 +131,25 @@ spec:
       restartPolicy: Always
       dnsPolicy: ClusterFirst
 ---
+# Source: fhir-server/templates/fhir-psql-db-external-secret.yaml
+apiVersion: "external-secrets.io/v1beta1"
+kind: ExternalSecret
+metadata:
+  name: fhir-psql-db
+  namespace: sepsis-demo
+spec:
+  refreshInterval: 15s
+  secretStoreRef:
+    name: vault-backend
+    kind: ClusterSecretStore
+  target:
+    name: fhir-psql-db
+    template:
+      type: Opaque
+  dataFrom:
+  - extract:
+      key: secret/data/global/fhir-psql-db
+---
 # Source: fhir-server/templates/fhir-psql-db-dependencies.yaml
 kind: List
 apiVersion: v1
